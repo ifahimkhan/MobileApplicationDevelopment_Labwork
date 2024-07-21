@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MobileApplicationDevelopment_Labwork</string>
+    <array name="operators">
+        <item>+</item>
+        <item>-</item>
+        <item>*</item>
+        <item>/</item>
+    </array>
 </resources>
