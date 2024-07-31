@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/purple_200"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="gravity"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="#bcf5b1"
+            android:gravity="left"
+            android:layout_margin="5dp"
+            android:text="left"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="#0F9D58"
+            android:gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:text="center_horizontal"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="#bcf5b1"
+            android:gravity="right"
+            android:text="right"
+            android:layout_margin="5dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="#0F9D58"
+            android:gravity="center"
+            android:text="center"
+            android:layout_margin="5dp"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/teal_200"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="layout_gravity"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:background="#bcf5b1"
+            android:text="left"
+            android:layout_margin="5dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#0F9D58"
+            android:layout_margin="5dp"
+            android:text="center_horizontal"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:background="#bcf5b1"
+            android:text="right"
+            android:layout_margin="5dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="#0F9D58"
+            android:text="center"
+            android:layout_margin="5dp"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
