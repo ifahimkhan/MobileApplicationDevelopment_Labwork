@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_marginTop="32dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explicit Intent Example"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <Button
-        android:onClick="openSecondActivity"
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to Second Activity (Using Explicit Intent)" />
+        android:onClick="openSecondActivity"
+        android:text="Go to Second Activity (Using Explicit Intent)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
 
-    <Button
-        android:layout_marginTop="32dp"
-        android:onClick="openWebPage"
-        android:id="@+id/implicitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open Web Page (Using Implicit Intent)" />
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

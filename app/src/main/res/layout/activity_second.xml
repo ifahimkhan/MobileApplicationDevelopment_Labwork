@@ -1,42 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center_horizontal"
     tools:context=".SecondActivity">
 
-    <TextView
-        android:textSize="32sp"
-        android:text="Implicit Intent Example"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/idLaunchMap"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:onClick="launchMap"
-        android:text="Launch Map" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/idLaunchMarket"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:onClick="launchMarket"
-        android:text="Launch Market" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Implicit Intent Example"
+            android:textSize="32sp" />
 
-    <Button
-        android:id="@+id/idSendEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:onClick="sendEmail"
-        android:text="Send Email" />
+        <Button
+            android:id="@+id/idLaunchMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="launchMap"
+            android:text="Launch Map" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/idLaunchMarket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="launchMarket"
+            android:text="Launch Market" />
+
+        <Button
+            android:id="@+id/idSendEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="sendEmail"
+            android:text="Send Email" />
+
+        <Button
+            android:id="@+id/openWebPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="openWebPage"
+            android:text="Open Web Page" />
+
+        <Button
+            android:id="@+id/makeCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="makeCall"
+            android:text="Make a Phone Call" />
+
+        <Button
+            android:id="@+id/takePicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="takePicture"
+            android:text="Take Picture" />
+
+        <Button
+            android:id="@+id/sendSms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="sendSms"
+            android:text="Send SMS" />
+
+        <Button
+            android:id="@+id/openContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="openContact"
+            android:text="Open Contact" />
+    </LinearLayout>
+
+</ScrollView>
