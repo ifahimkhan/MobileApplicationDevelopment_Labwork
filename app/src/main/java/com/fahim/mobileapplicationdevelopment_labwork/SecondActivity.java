@@ -73,4 +73,10 @@ public class SecondActivity extends AppCompatActivity {
         }
 
     }
+    public void openWebPage(View view) {
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("https://www.google.com"));
+        startActivity(intent);
+    }
 }
