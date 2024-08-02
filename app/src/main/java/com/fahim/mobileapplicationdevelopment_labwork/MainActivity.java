@@ -2,6 +2,7 @@ package com.fahim.mobileapplicationdevelopment_labwork;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -27,9 +28,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openCheckBoxes(View view) {
-
+        startActivity(new Intent(this, CheckBoxesActivity.class));
     }
 
     public void openRadioButton(View view) {
+        startActivity(new Intent(this, RadioButtonActivity.class));
     }
 }
