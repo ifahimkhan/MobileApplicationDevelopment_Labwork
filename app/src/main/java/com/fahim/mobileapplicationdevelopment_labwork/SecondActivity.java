@@ -54,7 +54,7 @@ public class SecondActivity extends AppCompatActivity {
 
     public void takePicture(View view) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        Intent chooserIntent = Intent.createChooser(intent, "Choose Phone App");
+        Intent chooserIntent = Intent.createChooser(intent, "Choose Camera App");
         startActivityForResult(chooserIntent, 101);
     }
 
