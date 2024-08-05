@@ -8,4 +8,13 @@
     tools:context=".MainActivity">
 
 
+    <ListView
+        android:id="@+id/listview_groceries"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/grocery_item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
