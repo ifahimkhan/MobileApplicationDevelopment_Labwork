@@ -1,7 +1,6 @@
 package com.fahim.mobileapplicationdevelopment_labwork;
 
 import android.content.Context;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class GroceryAdapter extends ArrayAdapter<GroceryItem> {
+
+    static class ViewHolder {
+        ImageView imageView;
+        TextView textView;
+    }
+
     private ArrayList<GroceryItem> groceryItemArrayList;
     private Context context;
 
@@ -30,7 +35,7 @@ public class GroceryAdapter extends ArrayAdapter<GroceryItem> {
             convertView = LayoutInflater.from(context).inflate(R.layout.grocery_item, parent, false);
             holder = new ViewHolder();
             holder.imageView = convertView.findViewById(R.id.imageView_grocery);
-            holder.textView= convertView.findViewById(R.id.textview_title);
+            holder.textView = convertView.findViewById(R.id.textview_title);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -43,14 +48,12 @@ public class GroceryAdapter extends ArrayAdapter<GroceryItem> {
         return convertView;
     }
 
-    static class ViewHolder {
-        ImageView imageView;
-        TextView textView;
-    }
+
     @Override
     public int getCount() {
         return groceryItemArrayList.size();
     }
+
     @Override
     public GroceryItem getItem(int position) {
         return groceryItemArrayList.get(position);
