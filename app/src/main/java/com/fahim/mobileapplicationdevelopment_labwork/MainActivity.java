@@ -2,11 +2,14 @@ package com.fahim.mobileapplicationdevelopment_labwork;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.DatePicker;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +28,56 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dateSelected = findViewById(R.id.dateSelected);
+        dateSelected.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                popUpDialog(v);
+                return true;
+            }
+        });
+        dateSelected.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP){
+                    dateSelected.setTextColor(getColor(R.color.fahimColor));
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                           dateSelected.setTextColor(getColor((R.color.black)));
+                        }
+                    }, 1000);
+                }
+                if (event.getAction() == MotionEvent.ACTION_DOWN){
+                    dateSelected.setTextColor(getColor(R.color.fahimColor1));
+
+                }
+                if (event.getAction() == MotionEvent.ACTION_MOVE){
+                    dateSelected.setTextColor(getColor(R.color.fahimColor2));
+
+                }
+                return false;
+            }
+        });
+    }
+
+    private void popUpDialog(View v) {
+        PopupMenu popupMenu = new PopupMenu(this,v);
+        popupMenu.getMenuInflater().inflate(R.menu.pop_menu, popupMenu.getMenu());
+        popupMenu.show();
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if (item.getItemId() == R.id.clear){
+                    dateSelected.setText("");
+                }
+                if (item.getItemId() == R.id.reset){
+                    dateSelected.setText("No date selected");
+                }
+                return false;
+
+            }
+        });
     }
 
     public void showDatePickerDialog(View view) {

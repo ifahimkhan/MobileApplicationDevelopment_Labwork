@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="fahimColor">#F4511E</color>
+    <color name="fahimColor1">#8E24AA</color>
+    <color name="fahimColor2">#FDD835</color>
 </resources>
