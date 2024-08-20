@@ -1,11 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/root"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/date"
+            android:textSize="32sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Some DateSelected" />
+
+
+        <Button
+            android:onClick="showDialog"
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pick a date" />
+        <Button
+            android:onClick="showNextScreen"
+            android:id="@+id/shownext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="open new Screen" />
+
+        <Button
+            android:onClick="launchCamera"
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="open Camera" />
+
+
+    </LinearLayout>
+</ScrollView>
