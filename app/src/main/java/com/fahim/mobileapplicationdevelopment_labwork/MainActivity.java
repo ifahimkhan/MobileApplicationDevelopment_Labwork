@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -21,25 +22,53 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     private ImageView imageView;
-
+    /*
+    RequestOptions requestOptions = new RequestOptions()
+            .skipMemoryCache(true) // Focus on using Bitmap Pool
+            .diskCacheStrategy(DiskCacheStrategy.NONE);*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageView = findViewById(R.id.imageView);
+       /* String filePathOne="";
+        String filePathTwo="";
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inMutable = true;
+        Bitmap bitmapOne = BitmapFactory.decodeFile(filePathOne, options);
+        imageView.setImageBitmap(bitmapOne);
+
+        options.inBitmap = bitmapOne; // Reuse bitmapOne's memory
+        Bitmap bitmapTwo = BitmapFactory.decodeFile(filePathTwo, options);
+        imageView.setImageBitmap(bitmapTwo);
+
+        RequestOptions requestOptions = new RequestOptions()
+                .skipMemoryCache(true) // Focus on using Bitmap Pool
+                .diskCacheStrategy(DiskCacheStrategy.NONE);
+
+        Glide.with(MainActivity.this)
+                .asBitmap()
+                .load(filePathOne)
+                .apply(requestOptions)
+                .into(imageView);*/
 
     }
 
     public void selectImage(View view) {
         Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
         photoPickerIntent.setType("image/*");
-        startActivityForResult(photoPickerIntent, 1);
+        startActivityForResult(Intent.createChooser(photoPickerIntent,"Pick Image"), 1);
 
     }
     @Override
@@ -49,6 +78,11 @@ public class MainActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK && requestCode == 1)
         {
             Uri chosenImageUri = data.getData();
+           /* Glide.with(imageView.getContext())
+                    .asBitmap()
+                    .load(chosenImageUri)
+                    .apply(requestOptions)
+                    .into(imageView);*/
 
             Bitmap mBitmap = null;
             try {
@@ -64,6 +98,12 @@ public class MainActivity extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap mBitmap = (Bitmap) extras.get("data");
             imageView.setImageBitmap(mBitmap);
+            /*Glide.with(imageView.getContext())
+                    .asBitmap()
+                    .load(extras.get("data"))
+                    .apply(requestOptions)
+                    .into(imageView);
+*/
         }
     }
 
@@ -71,4 +111,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent,2);
     }
+
 }
