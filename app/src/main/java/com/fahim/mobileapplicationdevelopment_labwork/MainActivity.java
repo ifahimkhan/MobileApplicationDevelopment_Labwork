@@ -36,8 +36,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loadWebPage(View view) {
+/*<html>
+<body>
+    <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
 
-        String unencodedHtml =
+    <script type="text/javascript">
+                function showAndroidToast(toast) {
+            Android.showToast(toast);
+        }
+    </script>
+</body>
+</html>*/
+
+                String unencodedHtml =
                 "<html><body><input type=\"button\" value=\"Say hello\" " +
                         "onClick=\"showAndroidToast('Hello Android!')\" />\n" +
                         "\n" +
