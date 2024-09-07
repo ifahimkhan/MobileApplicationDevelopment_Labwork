@@ -8,4 +8,39 @@
     tools:context=".MainActivity">
 
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Listening:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchAirPlaneMode" />
+
+    <Switch
+        android:id="@+id/switchInternetMode"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:checked="false"
+        android:text="Listening for Internet Broadcast: "
+        android:thumb="@drawable/baseline_circle_24"
+        android:track="@drawable/track_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switchAirPlaneMode"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:checked="false"
+        android:text="Listening for Airplane Broadcast: "
+        android:thumb="@drawable/baseline_circle_24"
+        android:track="@drawable/track_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchInternetMode" />
 </androidx.constraintlayout.widget.ConstraintLayout>
