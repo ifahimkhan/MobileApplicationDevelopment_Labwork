@@ -5,10 +5,8 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -16,7 +14,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.IOException;
+import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,23 +26,40 @@ public class MainActivity extends AppCompatActivity {
     ActivityResultLauncher<Intent> cameraLauncher;
     ActivityResultLauncher<Intent> galleryLauncher;
 
+    public void selectImage (View view){
+        Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        photoPickerIntent.setType("image/*");
+        galleryLauncher.launch(photoPickerIntent);
+//        startActivityForResult(Intent.createChooser(photoPickerIntent,"Pick Image"), 1);
+
+    }
+    public void captureImage (View view){
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        cameraLauncher.launch(Intent.createChooser(intent, "Camera"));
+//        startActivityForResult(intent,2);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageView = findViewById(R.id.imageView);
-       cameraLauncher = registerForActivityResult(
-               new ActivityResultContracts.StartActivityForResult(),
-               new ActivityResultCallback<ActivityResult>() {
-                   @Override
-                   public void onActivityResult(ActivityResult activityResult) {
-                       Intent data = activityResult.getData();
-                       Bundle extras = data.getExtras();
-                       Bitmap mBitmap = (Bitmap) extras.get("data");
-                       imageView.setImageBitmap(mBitmap);
-                   }
-               }
-       );
+        cameraLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult activityResult) {
+                        Intent data = activityResult.getData();
+                        Bundle extras = data.getExtras();
+                        Glide.with(imageView.getContext())
+                                .load(extras.get("data"))
+                                .into(imageView);
+                        /*
+                        Bitmap mBitmap = (Bitmap) extras.get("data");
+                        imageView.setImageBitmap(mBitmap);*/
+                    }
+                }
+        );
         galleryLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
@@ -52,11 +67,10 @@ public class MainActivity extends AppCompatActivity {
                     public void onActivityResult(ActivityResult activityResult) {
                         Intent data = activityResult.getData();
                         Uri chosenImageUri = data.getData();
-           /* Glide.with(imageView.getContext())
-                    .asBitmap()
-                    .load(chosenImageUri)
-                    .apply(requestOptions)
-                    .into(imageView);*/
+                        Glide.with(imageView.getContext())
+                                .asBitmap()
+                                .load(chosenImageUri)
+                                .into(imageView);/*
 
                         Bitmap mBitmap = null;
                         try {
@@ -69,46 +83,23 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 }
+        );*/
+
+
+                    }
+
+                }
         );
-       /* String filePathOne="";
-        String filePathTwo="";
-
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inMutable = true;
-        Bitmap bitmapOne = BitmapFactory.decodeFile(filePathOne, options);
-        imageView.setImageBitmap(bitmapOne);
-
-        options.inBitmap = bitmapOne; // Reuse bitmapOne's memory
-        Bitmap bitmapTwo = BitmapFactory.decodeFile(filePathTwo, options);
-        imageView.setImageBitmap(bitmapTwo);
-
-        RequestOptions requestOptions = new RequestOptions()
-                .skipMemoryCache(true) // Focus on using Bitmap Pool
-                .diskCacheStrategy(DiskCacheStrategy.NONE);
-
-        Glide.with(MainActivity.this)
-                .asBitmap()
-                .load(filePathOne)
-                .apply(requestOptions)
-                .into(imageView);*/
-
     }
 
-    public void selectImage(View view) {
-        Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
-        photoPickerIntent.setType("image/*");
-        galleryLauncher.launch(photoPickerIntent);
-//        startActivityForResult(Intent.createChooser(photoPickerIntent,"Pick Image"), 1);
-
-    }
-   /* @Override
+    /*@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && requestCode == 1)
         {
             Uri chosenImageUri = data.getData();
-           *//* Glide.with(imageView.getContext())
+            Glide.with(imageView.getContext())
                     .asBitmap()
                     .load(chosenImageUri)
                     .apply(requestOptions)
@@ -128,20 +119,12 @@ public class MainActivity extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap mBitmap = (Bitmap) extras.get("data");
             imageView.setImageBitmap(mBitmap);
-            *//*Glide.with(imageView.getContext())
+            *//**//*Glide.with(imageView.getContext())
                     .asBitmap()
                     .load(extras.get("data"))
                     .apply(requestOptions)
-                    .into(imageView);
-*//*
+                    .into(imageView);*//**//*
+
         }
     }*/
-
-    public void captureImage(View view) {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        cameraLauncher.launch(Intent.createChooser(intent,"Camera"));
-
-//        startActivityForResult(intent,2);
-    }
-
 }
