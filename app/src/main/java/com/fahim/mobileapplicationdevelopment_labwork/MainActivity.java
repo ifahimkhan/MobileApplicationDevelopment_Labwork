@@ -48,15 +48,17 @@ public class MainActivity extends AppCompatActivity {
     private void checkPermissionAndOpenFilePicker() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_REQUEST_STORAGE);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    PERMISSION_REQUEST_STORAGE);
         } else {
             openFilePicker();
         }
     }
 
     private void openFilePicker() {
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType("*/*");
+        intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{"text/comma-separated-values", "text/csv"});
         resultLauncher.launch(Intent.createChooser(intent, "Select CSV"));
     }
 

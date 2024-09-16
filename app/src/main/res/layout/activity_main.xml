@@ -1,7 +1,7 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -12,6 +12,10 @@
         android:text="Select CSV File"/>
 
     <ListView
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        android:dividerHeight="0dp"
+        tools:listitem="@layout/student_item"
         android:id="@+id/studentListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
