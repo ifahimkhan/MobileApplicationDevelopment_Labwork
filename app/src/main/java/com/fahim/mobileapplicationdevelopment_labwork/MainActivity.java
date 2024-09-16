@@ -1,7 +1,6 @@
 package com.fahim.mobileapplicationdevelopment_labwork;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -26,14 +25,15 @@ public class MainActivity extends AppCompatActivity {
     ActivityResultLauncher<Intent> cameraLauncher;
     ActivityResultLauncher<Intent> galleryLauncher;
 
-    public void selectImage (View view){
+    public void selectImage(View view) {
         Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
         photoPickerIntent.setType("image/*");
         galleryLauncher.launch(photoPickerIntent);
 //        startActivityForResult(Intent.createChooser(photoPickerIntent,"Pick Image"), 1);
 
     }
-    public void captureImage (View view){
+
+    public void captureImage(View view) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         cameraLauncher.launch(Intent.createChooser(intent, "Camera"));
 //        startActivityForResult(intent,2);
@@ -53,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
                         Bundle extras = data.getExtras();
                         Glide.with(imageView.getContext())
                                 .load(extras.get("data"))
-                                .into(imageView);
-                        /*
+                                .into(imageView);/*
                         Bitmap mBitmap = (Bitmap) extras.get("data");
                         imageView.setImageBitmap(mBitmap);*/
                     }
@@ -84,22 +83,18 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );*/
-
-
                     }
 
-                }
-        );
-    }
+                });
 
-    /*@Override
+   /* @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && requestCode == 1)
         {
             Uri chosenImageUri = data.getData();
-            Glide.with(imageView.getContext())
+           *//* Glide.with(imageView.getContext())
                     .asBitmap()
                     .load(chosenImageUri)
                     .apply(requestOptions)
@@ -119,12 +114,10 @@ public class MainActivity extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap mBitmap = (Bitmap) extras.get("data");
             imageView.setImageBitmap(mBitmap);
-            *//**//*Glide.with(imageView.getContext())
+           *//* Glide.with(imageView.getContext())
                     .asBitmap()
                     .load(extras.get("data"))
                     .apply(requestOptions)
-                    .into(imageView);*//**//*
-
-        }
-    }*/
+                    .into(imageView);*/
+    }
 }
