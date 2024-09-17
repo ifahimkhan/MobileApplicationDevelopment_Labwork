@@ -23,12 +23,19 @@
             </intent-filter>
         </activity>
         <receiver
-            android:name=".AirplaneModeReceiver"
+            android:name=".broadcast.AirplaneModeReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.AIRPLANE_MODE" />
             </intent-filter>
         </receiver>
+        <receiver android:name=".broadcast.ConnectivityReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
 
     </application>
 

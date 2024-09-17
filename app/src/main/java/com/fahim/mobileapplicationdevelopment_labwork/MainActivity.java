@@ -6,26 +6,30 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.Switch;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.fahim.mobileapplicationdevelopment_labwork.broadcast.AirplaneModeReceiver;
+import com.fahim.mobileapplicationdevelopment_labwork.broadcast.BatteryLevelReceiver;
+import com.fahim.mobileapplicationdevelopment_labwork.broadcast.ConnectivityReceiver;
 
 public class MainActivity extends AppCompatActivity {
 
     private AirplaneModeReceiver airplaneModeReceiver = new AirplaneModeReceiver();
     private ConnectivityReceiver connectivityReceiver = new ConnectivityReceiver();
+    private BatteryLevelReceiver batteryLevelReceiver = new BatteryLevelReceiver();
 
-    private TextView textView;
     private Switch airplaneModeSwitch;
     private Switch internetModeSwitch;
+    private Switch batteryLevelSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView = findViewById(R.id.textView);
         airplaneModeSwitch = findViewById(R.id.switchAirPlaneMode);
         internetModeSwitch = findViewById(R.id.switchInternetMode);
+        batteryLevelSwitch = findViewById(R.id.switchBatteryLevel);
 
         internetModeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -49,12 +53,37 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        batteryLevelSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    registerReceiver(batteryLevelReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED), Context.RECEIVER_NOT_EXPORTED);
+                } else {
+                    unregisterReceiver(batteryLevelReceiver);
+                }
+            }
+        });
+
+
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(airplaneModeReceiver);
-        unregisterReceiver(connectivityReceiver);
+        try {
+            unregisterReceiver(airplaneModeReceiver);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+        try {
+            unregisterReceiver(connectivityReceiver);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+        try {
+            unregisterReceiver(batteryLevelReceiver);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
     }
 }

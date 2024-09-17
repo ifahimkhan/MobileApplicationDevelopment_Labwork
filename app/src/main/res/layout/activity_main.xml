@@ -12,35 +12,56 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Listening:"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Broadcast Receivers:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/switchAirPlaneMode" />
-
+        app:layout_constraintTop_toTopOf="parent" />
     <Switch
         android:id="@+id/switchInternetMode"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="24dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
         android:checked="false"
-        android:text="Listening for Internet Broadcast: "
+        android:text="Internet Broadcast: "
         android:thumb="@drawable/baseline_circle_24"
         android:track="@drawable/track_selector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/textView" />
 
     <Switch
         android:id="@+id/switchAirPlaneMode"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="24dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
         android:checked="false"
-        android:text="Listening for Airplane Broadcast: "
+        android:text="Airplane Broadcast: "
         android:thumb="@drawable/baseline_circle_24"
         android:track="@drawable/track_selector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/switchInternetMode" />
+
+    <Switch
+        android:id="@+id/switchBatteryLevel"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:checked="false"
+        android:text="Battery Level Broadcast: "
+        android:thumb="@drawable/baseline_circle_24"
+        android:track="@drawable/track_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchAirPlaneMode" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

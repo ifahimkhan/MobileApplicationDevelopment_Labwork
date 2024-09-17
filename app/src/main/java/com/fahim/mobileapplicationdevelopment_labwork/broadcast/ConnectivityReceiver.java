@@ -1,4 +1,4 @@
-package com.fahim.mobileapplicationdevelopment_labwork;
+package com.fahim.mobileapplicationdevelopment_labwork.broadcast;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
