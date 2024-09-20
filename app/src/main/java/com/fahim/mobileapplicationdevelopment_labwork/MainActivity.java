@@ -58,9 +58,14 @@ public class MainActivity extends AppCompatActivity {
     public void multipleApiCalls(View view) {
         ExecutorService executor = Executors.newFixedThreadPool(3);
 
-        for (int i = 1; i <= 3; i++) {
+        for (int i = 1; i <= 10; i++) {
             final int apiNumber = i;
             executor.submit(() -> {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 System.out.println("Fetching data from API " + apiNumber + " by: " + Thread.currentThread().getName());
             });
         }
@@ -85,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         Callable<Integer> calculateSquare = () -> {
             int number = 5;
+            Thread.sleep(6000);
             return number * number;
         };
 
