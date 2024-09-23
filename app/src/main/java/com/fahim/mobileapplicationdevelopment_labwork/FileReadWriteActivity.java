@@ -12,27 +12,24 @@ public class FileReadWriteActivity extends AppCompatActivity {
 
     private EditText editText;
     private TextView textView;
-    private InternalStorage internalStorage = new InternalStorage();
-    private String selectedDate, selectedTime;
+    private SharedPreferencesStorage sharedPreferencesStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_file_read_write);
+        sharedPreferencesStorage = new SharedPreferencesStorage(this);
         editText = findViewById(R.id.textInputEditText);
         textView = findViewById(R.id.textView);
-        selectedDate = getIntent().getStringExtra("selectedDate");
-        selectedTime = getIntent().getStringExtra("selectedTime");
     }
 
     public void readData(View view) {
-        String data = internalStorage.readFromFile(this);
+        String data = sharedPreferencesStorage.fetchUserData();
         textView.setText(data);
     }
 
     public void writeData(View view) {
         String data = editText.getText().toString()+"\n";
-        data = data + selectedDate +"\n"+ selectedTime;
-        internalStorage.writeToFile(data, this);
+       sharedPreferencesStorage.saveUserData(data);
     }
 }
