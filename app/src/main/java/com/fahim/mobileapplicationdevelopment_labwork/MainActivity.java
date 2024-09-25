@@ -3,6 +3,7 @@ package com.fahim.mobileapplicationdevelopment_labwork;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -36,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     IntentFilter filter = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
-                    registerReceiver(connectivityReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        registerReceiver(connectivityReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+                    } else registerReceiver(connectivityReceiver, filter);
                 } else {
                     unregisterReceiver(connectivityReceiver);
                 }
@@ -47,7 +50,10 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     IntentFilter filter = new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
-                    registerReceiver(airplaneModeReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        registerReceiver(airplaneModeReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+                    } else
+                        registerReceiver(airplaneModeReceiver, filter);
                 } else {
                     unregisterReceiver(airplaneModeReceiver);
                 }
@@ -57,7 +63,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    registerReceiver(batteryLevelReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED), Context.RECEIVER_NOT_EXPORTED);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        registerReceiver(batteryLevelReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED), Context.RECEIVER_NOT_EXPORTED);
+                    } else
+                        registerReceiver(batteryLevelReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
                 } else {
                     unregisterReceiver(batteryLevelReceiver);
                 }

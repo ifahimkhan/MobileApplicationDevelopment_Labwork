@@ -14,6 +14,7 @@ public class BatteryLevelReceiver extends BroadcastReceiver {
         int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
         float batteryPct = level / (float) scale * 100;
 
-        Toast.makeText(context, "Battery Level: " + batteryPct + "%", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Battery Level: " + batteryPct + "%", Toast.LENGTH_SHORT)
+                .show();
     }
 }
