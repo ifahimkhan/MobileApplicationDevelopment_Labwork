@@ -9,6 +9,7 @@
 
 
     <Button
+        android:textSize="30sp"
         android:onClick="gotoSecondActivity"
         android:id="@+id/open"
         android:layout_width="wrap_content"
