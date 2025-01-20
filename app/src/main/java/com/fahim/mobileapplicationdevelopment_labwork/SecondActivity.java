@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,12 +16,17 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        String name = getIntent().getStringExtra("NAME");
+        int age = getIntent().getIntExtra("AGE", 0);
+        Toast.makeText(this, "Name:"+name, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Age:"+age, Toast.LENGTH_SHORT).show();
+
 
     }
 
     public void launchMap(View view) {
 
-        Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("geo:19.0760, 72.8777?q=Mukesh Patel School of Technology Management Vile Parle"));
         Intent chooserIntent = Intent.createChooser(intent, "Launch Map");
         startActivity(chooserIntent);
@@ -79,4 +85,5 @@ public class SecondActivity extends AppCompatActivity {
         intent.setData(Uri.parse("https://www.google.com"));
         startActivity(intent);
     }
+
 }

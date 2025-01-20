@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:onClick="launchMap"
+            android:onClick="launchMap1"
             android:text="Launch Map" />
 
         <Button
