@@ -1,9 +1,12 @@
 package com.fahim.mobileapplicationdevelopment_labwork;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.DatePicker;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView listViewGroceries;
     private GroceryAdapter adapter;
     private ArrayList<GroceryItem> groceriesList = new ArrayList<>();
+    private DatePickerDialog datePickerDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +25,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listViewGroceries = findViewById(R.id.listview_groceries);
+        TextView tv_date = findViewById(R.id.date);
+        datePickerDialog = new DatePickerDialog(this, android.R.style.Theme_Holo_Light_Dialog_NoActionBar);
+        tv_date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePickerDialog.show();
+
+            }
+        });
+        datePickerDialog.setOnDateSetListener(new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                tv_date.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
+            }
+        });
 
         initArrayList();
 
