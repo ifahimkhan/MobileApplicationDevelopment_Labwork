@@ -19,8 +19,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         listViewGroceries = findViewById(R.id.listview_groceries);
+
         initArrayList();
+
         adapter = new GroceryAdapter(this, groceriesList);
         listViewGroceries.setAdapter(adapter);
         listViewGroceries.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -40,14 +43,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void initArrayList() {
         groceriesList.clear();
-        groceriesList.add(new GroceryItem("Potato", R.drawable.ic_launcher_background));
-        groceriesList.add(new GroceryItem("Onion", R.drawable.ic_launcher_background));
-        groceriesList.add(new GroceryItem("Apple", R.drawable.ic_launcher_background));
-        groceriesList.add(new GroceryItem("Carrot", R.drawable.ic_launcher_background));
-        groceriesList.add(new GroceryItem("Lettuce", R.drawable.ic_launcher_background));
-        groceriesList.add(new GroceryItem("Tomato", R.drawable.ic_launcher_background));
-        groceriesList.add(new GroceryItem("Garlic", R.drawable.ic_launcher_background));
-        groceriesList.add(new GroceryItem("Spinach", R.drawable.ic_launcher_background));
-//        adapter.notifyDataSetChanged();
+        groceriesList.add(new GroceryItem("Potato", R.drawable.potato));
+        groceriesList.add(new GroceryItem("Onion", R.drawable.onion));
+        groceriesList.add(new GroceryItem("Apple", R.drawable.apple));
+        groceriesList.add(new GroceryItem("Carrot", R.drawable.carrot));
+        groceriesList.add(new GroceryItem("Lettuce", R.drawable.lettuce));
+        groceriesList.add(new GroceryItem("Tomato", R.drawable.tomato));
+        groceriesList.add(new GroceryItem("Garlic", R.drawable.garlic));
+        groceriesList.add(new GroceryItem("Spinach", R.drawable.spinach));
     }
 }
