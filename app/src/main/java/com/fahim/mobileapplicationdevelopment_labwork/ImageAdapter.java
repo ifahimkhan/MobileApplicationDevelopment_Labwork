@@ -62,7 +62,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
                 Uri imageUri = ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, id);
 
                 // Use Glide to load the image using the content URI
-                Glide.with(holder.imageView.getContext())
+                Glide.with(context)
                         .load(imageUri)
                         .override(500)
                         .centerCrop()

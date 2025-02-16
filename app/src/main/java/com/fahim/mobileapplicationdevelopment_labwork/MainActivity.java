@@ -34,11 +34,8 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 loadImages();
             }
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            // Android 10-12: No need for READ_EXTERNAL_STORAGE permission for shared media
-            loadImages();
-        } else {
-            // Android 9 and below: Request READ_EXTERNAL_STORAGE permission
+        } else  {
+            // Android 12 and below: Request READ_EXTERNAL_STORAGE permission
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
                     != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this,
