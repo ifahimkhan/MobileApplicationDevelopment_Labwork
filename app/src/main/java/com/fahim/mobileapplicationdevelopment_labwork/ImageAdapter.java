@@ -55,13 +55,11 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         if (cursor.moveToPosition(position)) {
-            // Use MediaStore.Images.Media._ID to get the content URI
             int columnIndex = cursor.getColumnIndex(MediaStore.Images.Media._ID);
             if (columnIndex != -1) {
                 long id = cursor.getLong(columnIndex);
                 Uri imageUri = ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, id);
 
-                // Use Glide to load the image using the content URI
                 Glide.with(context)
                         .load(imageUri)
                         .override(500)
