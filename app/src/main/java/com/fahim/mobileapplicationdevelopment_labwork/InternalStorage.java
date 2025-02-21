@@ -7,8 +7,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class InternalStorage {
+public class InternalStorage implements Storage {
 
+    @Override
     public void writeToFile(String data, Context context) {
         String fileName = "example.txt";
         try (FileOutputStream fos = context.openFileOutput(fileName, Context.MODE_PRIVATE)) {
@@ -19,6 +20,7 @@ public class InternalStorage {
         }
     }
 
+    @Override
     public String readFromFile(Context context) {
         String fileName = "example.txt";
         StringBuilder stringBuilder = new StringBuilder();

@@ -9,7 +9,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class ExternalStorage {
+public class ExternalStorage implements Storage{
+    @Override
     public void writeToFile(String data, Context context) {
         String fileName = "example.txt";
         File file = new File(Environment.getExternalStoragePublicDirectory(
@@ -22,6 +23,7 @@ public class ExternalStorage {
         }
     }
 
+    @Override
     public String readFromFile(Context context) {
         String fileName = "example.txt";
         StringBuilder stringBuilder = new StringBuilder();
