@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
 
+    <Button
+        android:id="@+id/btnPickDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick a Directory" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnCreateFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a File" />
+
+    <Button
+        android:id="@+id/btnPickFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick a File" />
+
+    <TextView
+        android:id="@+id/tvFileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="Selected file name will appear here"
+        android:textSize="16sp" />
+</LinearLayout>
