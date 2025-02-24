@@ -9,13 +9,14 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class ExternalStorage implements Storage{
+public class ExternalStorage implements Storage {
     @Override
     public void writeToFile(String data, Context context) {
         String fileName = "example.txt";
         File file = new File(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_DOCUMENTS), fileName);
-        try (FileOutputStream fos = new FileOutputStream(file)) {
+        try {
+            FileOutputStream fos = new FileOutputStream(file);
             fos.write(data.getBytes());
             Toast.makeText(context, "File Written Successfully", Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
@@ -30,7 +31,8 @@ public class ExternalStorage implements Storage{
         File file = new File(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_DOCUMENTS), fileName);
         if (file.exists())
-            try (FileInputStream fis = new FileInputStream(file)) {
+            try {
+                FileInputStream fis = new FileInputStream(file);
                 int content;
                 while ((content = fis.read()) != -1) {
                     stringBuilder.append((char) content);

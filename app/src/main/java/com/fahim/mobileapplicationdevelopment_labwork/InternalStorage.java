@@ -12,7 +12,8 @@ public class InternalStorage implements Storage {
     @Override
     public void writeToFile(String data, Context context) {
         String fileName = "example.txt";
-        try (FileOutputStream fos = context.openFileOutput(fileName, Context.MODE_PRIVATE)) {
+        try {
+            FileOutputStream fos = context.openFileOutput(fileName, Context.MODE_PRIVATE);
             fos.write(data.getBytes());
             Toast.makeText(context, "File Written Successfully", Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
@@ -25,7 +26,8 @@ public class InternalStorage implements Storage {
         String fileName = "example.txt";
         StringBuilder stringBuilder = new StringBuilder();
 
-        try (FileInputStream fis = context.openFileInput(fileName)) {
+        try {
+            FileInputStream fis = context.openFileInput(fileName);
             int content;
             while ((content = fis.read()) != -1) {
                 stringBuilder.append((char) content);
