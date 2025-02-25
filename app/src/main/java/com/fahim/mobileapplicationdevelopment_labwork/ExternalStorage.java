@@ -14,7 +14,7 @@ public class ExternalStorage implements Storage {
     public void writeToFile(String data, Context context) {
         String fileName = "example.txt";
         File file = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_DOCUMENTS), fileName);
+                Environment.DIRECTORY_DOWNLOADS), fileName);
         try {
             FileOutputStream fos = new FileOutputStream(file);
             fos.write(data.getBytes());
@@ -29,7 +29,7 @@ public class ExternalStorage implements Storage {
         String fileName = "example.txt";
         StringBuilder stringBuilder = new StringBuilder();
         File file = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_DOCUMENTS), fileName);
+                Environment.DIRECTORY_DOWNLOADS), fileName);
         if (file.exists())
             try {
                 FileInputStream fis = new FileInputStream(file);
