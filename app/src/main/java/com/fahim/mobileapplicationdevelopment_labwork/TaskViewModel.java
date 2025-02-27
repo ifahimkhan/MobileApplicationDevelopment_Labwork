@@ -1,6 +1,7 @@
 package com.fahim.mobileapplicationdevelopment_labwork;
 
 import android.app.Application;
+
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
@@ -36,5 +37,11 @@ public class TaskViewModel extends AndroidViewModel {
 
     public LiveData<List<Task>> getAllTasks() {
         return allTasks;
+    }
+
+    @Override
+    protected void onCleared() {
+        repository.onCleared();
+        super.onCleared();
     }
 }

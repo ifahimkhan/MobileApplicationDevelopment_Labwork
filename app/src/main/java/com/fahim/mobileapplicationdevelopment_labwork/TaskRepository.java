@@ -46,4 +46,8 @@ public class TaskRepository {
         return allTasks;
     }
 
+    public void onCleared(){
+        executorService.shutdown();
+    }
+
 }

@@ -1,6 +1,7 @@
 package com.fahim.mobileapplicationdevelopment_labwork;
 
 import android.content.Context;
+
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
@@ -12,12 +13,16 @@ public abstract class TaskDatabase extends RoomDatabase {
 
     public abstract TaskDao taskDao();
 
-    public static synchronized TaskDatabase getInstance(Context context) {
+    public static TaskDatabase getInstance(final Context context) {
         if (instance == null) {
-            instance = Room.databaseBuilder(context.getApplicationContext(),
-                    TaskDatabase.class, "task_database")
-                    .fallbackToDestructiveMigration()
-                    .build();
+            synchronized (TaskDatabase.class) {
+                if (instance == null) {
+                    instance = Room.databaseBuilder(context.getApplicationContext(),
+                                    TaskDatabase.class, "task_database")
+                            .fallbackToDestructiveMigration()
+                            .build();
+                }
+            }
         }
         return instance;
     }

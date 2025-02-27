@@ -28,7 +28,6 @@ public class AddEditTaskActivity extends AppCompatActivity {
         editTextDescription = findViewById(R.id.edit_text_description);
         Button saveTaskButton = findViewById(R.id.button_save_task);
 
-        // Check if we're editing or adding a new task
         Intent intent = getIntent();
         if (intent.hasExtra(EXTRA_ID)) {
             setTitle("Edit Task");
@@ -50,7 +49,6 @@ public class AddEditTaskActivity extends AppCompatActivity {
         String title = editTextTitle.getText().toString().trim();
         String description = editTextDescription.getText().toString().trim();
 
-        // Validate input
         if (TextUtils.isEmpty(title) || TextUtils.isEmpty(description)) {
             Toast.makeText(this, "Please fill out both fields", Toast.LENGTH_SHORT).show();
             return;
