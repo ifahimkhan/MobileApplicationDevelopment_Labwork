@@ -43,8 +43,8 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
 
-    implementation ("androidx.room:room-runtime:2.5.0")
-    annotationProcessor ("androidx.room:room-compiler:2.5.0")
+    implementation ("androidx.room:room-runtime:2.6.1")
+    annotationProcessor ("androidx.room:room-compiler:2.6.1")
     // For LiveData and ViewModel
     implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
 
