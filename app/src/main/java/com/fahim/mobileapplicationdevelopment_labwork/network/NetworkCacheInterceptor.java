@@ -7,13 +7,13 @@ import okhttp3.CacheControl;
 import okhttp3.Interceptor;
 import okhttp3.Response;
 
-public class CacheInterceptor implements Interceptor {
+public class NetworkCacheInterceptor implements Interceptor {
 
     @Override
     public Response intercept(Chain chain) throws IOException {
         Response response = chain.proceed(chain.request());
         CacheControl cacheControl = new CacheControl.Builder()
-                .maxAge(10, TimeUnit.DAYS)
+                .maxAge(1, TimeUnit.MINUTES)
                 .build();
         return response.newBuilder()
                 .header("Cache-Control", cacheControl.toString())

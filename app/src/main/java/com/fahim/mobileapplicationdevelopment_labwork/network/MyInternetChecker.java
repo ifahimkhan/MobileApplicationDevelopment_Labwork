@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-public class MyInternetChecker implements ForceCacheInterceptor.IsInternetAvailable {
+public class MyInternetChecker implements ApplicationCacheInterceptor.IsInternetAvailable {
     private Context context;
 
     public MyInternetChecker(Context context) {

@@ -32,8 +32,8 @@ public class RetrofitClient {
 
             OkHttpClient client = new OkHttpClient.Builder()
                     .cache(cache)
-                    .addNetworkInterceptor(new CacheInterceptor())
-                    .addInterceptor(new ForceCacheInterceptor(() -> new MyInternetChecker(context).isInternetAvailable()))
+                    .addNetworkInterceptor(new NetworkCacheInterceptor())
+                    .addInterceptor(new ApplicationCacheInterceptor(() -> new MyInternetChecker(context).isInternetAvailable()))
                     .addInterceptor(loggingInterceptor)
                     .build();
 

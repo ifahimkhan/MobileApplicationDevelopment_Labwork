@@ -7,11 +7,11 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class ForceCacheInterceptor implements Interceptor {
+public class ApplicationCacheInterceptor implements Interceptor {
 
     private IsInternetAvailable isInternetAvailable;
 
-    public ForceCacheInterceptor(IsInternetAvailable isInternetAvailable) {
+    public ApplicationCacheInterceptor(IsInternetAvailable isInternetAvailable) {
         this.isInternetAvailable = isInternetAvailable;
     }
 
