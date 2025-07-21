@@ -19,10 +19,18 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText editTextUsername,editTextPassword;
+    private Button buttonLogin,buttonSignup;
+    private TextView textViewForgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.newfile);
+        editTextUsername = findViewById(R.id.editTextText);
+        editTextPassword = findViewById(R.id.editTextTextPassword);
+        buttonLogin = findViewById(R.id.button);
+        buttonSignup = findViewById(R.id.button2);
+        textViewForgotPassword = findViewById(R.id.textView2);
     }
 }
