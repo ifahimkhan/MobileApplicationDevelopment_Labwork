@@ -7,7 +7,7 @@
         android:id="@+id/item"
         android:text="+"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="32dp"
+        android:textSize="48dp"
         android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
