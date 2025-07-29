@@ -11,14 +11,6 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        Log.e("TAG", "attachBaseContext: ");
-        ContextUtils.updateLocale(newBase, Locale.forLanguageTag("ar"));
-        super.attachBaseContext(newBase);
-
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

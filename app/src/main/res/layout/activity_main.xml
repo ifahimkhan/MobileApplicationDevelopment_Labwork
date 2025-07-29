@@ -22,10 +22,11 @@
         android:layout_margin="32dp">
 
         <LinearLayout
+            android:background="@android:color/transparent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="24dp"
+            android:padding="42dp"
             android:gravity="center_horizontal">
 
             <ImageView
@@ -77,8 +78,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Login"
-                android:backgroundTint="@color/instaPurple"
-                android:textColor="@color/instaYellow"
+                android:backgroundTint="@color/instaDarkPink"
+                android:textColor="@color/white"
                 android:elevation="2dp"
                 android:fontFamily="sans-serif-medium"/>
 
