@@ -1,0 +1,11 @@
+<!-- res/drawable/bg_instagram_glass.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="135"
+        android:centerColor="#833AB4"
+        android:dither="true"
+        android:endColor="#FCB045"
+        android:gradientRadius="800"
+        android:startColor="#405DE6"
+        android:type="linear" />
+</shape>

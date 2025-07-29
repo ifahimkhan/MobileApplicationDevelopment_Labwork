@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="glassColor">#80FFFFFF</color>
+    <color name="purple_700">#833AB4</color>
+    <color name="instaRoyalBlue">#405DE6</color>
+    <color name="instaPurple">#833AB4</color>
+    <color name="instaDarkPink">#C13584</color>
+    <color name="instaRed">#FD1D1D</color>
+    <color name="instaOrangeYellow">#FCB045</color>
+    <color name="instaYellow">#FFDC80</color>
+
 </resources>

@@ -1,22 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_instagram_glass"
     tools:context=".MainActivity">
 
-    <TextView
-        android:textSize="26sp"
-        android:layout_margin="16dp"
-        android:id="@+id/hello_world"
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/glassCard"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/glassColor"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="32dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/outline_photo_camera_24"
+                android:contentDescription="Logo"
+                android:layout_gravity="center_horizontal"
+                android:alpha="0.9"/>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <EditText
+                android:drawablePadding="8dp"
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:inputType="text"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:padding="12dp" />
+
+            <View android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <EditText
+                android:drawablePadding="8dp"
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:inputType="textPassword"
+                android:drawableLeft="@drawable/outline_lock_open_24"
+                android:padding="12dp" />
+
+            <View android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:backgroundTint="@color/instaPurple"
+                android:textColor="@color/instaYellow"
+                android:elevation="2dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot password?"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="12dp"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
