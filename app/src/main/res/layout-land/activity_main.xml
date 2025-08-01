@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/container_one"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray" />
+
+    <FrameLayout
+        android:id="@+id/container_two"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</LinearLayout>

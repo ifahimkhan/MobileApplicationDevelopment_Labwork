@@ -5,14 +5,9 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textViewReceived"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is the First Fragment"
-        android:textSize="22sp" />
-
-    <Button
-        android:id="@+id/firstButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click Me" />
+        android:text="Received message will appear here" />
 </LinearLayout>
+
