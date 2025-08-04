@@ -9,7 +9,7 @@ public class RetrofitClient {
 
     private RetrofitClient() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.5:3000/")
+                .baseUrl("https://ifahimkhan.github.io/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         apiService = retrofit.create(ApiService.class);
@@ -22,5 +22,7 @@ public class RetrofitClient {
         return instance;
     }
 
-    public ApiService getApiService() { return apiService; }
+    public ApiService getApiService() {
+        return apiService;
+    }
 }
