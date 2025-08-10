@@ -6,12 +6,14 @@ import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class ImageAdapter extends BaseAdapter {
+public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
     private Context context;
     private ArrayList<String> imagePaths;
     private LayoutInflater inflater;
@@ -22,14 +24,17 @@ public class ImageAdapter extends BaseAdapter {
         this.inflater = LayoutInflater.from(context);
     }
 
+    @NonNull
     @Override
-    public int getCount() {
-        return imagePaths.size();
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(inflater.inflate(R.layout.item_image, parent, false));
     }
 
     @Override
-    public Object getItem(int position) {
-        return imagePaths.get(position);
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        String imagePath = imagePaths.get(position);
+        Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
+        holder.imageView.setImageBitmap(bitmap);
     }
 
     @Override
@@ -38,30 +43,16 @@ public class ImageAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
-        if(convertView == null) {
-            convertView = inflater.inflate(R.layout.item_image, parent, false);
-            holder = new ViewHolder();
-            holder.imageView = convertView.findViewById(R.id.imageView);
-            convertView.setTag(holder);
-        } else {
-            holder = (ViewHolder) convertView.getTag();
-        }
-
-        String imagePath = imagePaths.get(position);
-
-        // Efficient image loading: decode sampled bitmap to prevent OOM
-        BitmapFactory.Options options = new BitmapFactory.Options();
-//        options.inSampleSize = 4; // adjust as needed for thumbnails
-
-        Bitmap bitmap = BitmapFactory.decodeFile(imagePath, options);
-        holder.imageView.setImageBitmap(bitmap);
-
-        return convertView;
+    public int getItemCount() {
+        return imagePaths.size();
     }
 
-    static class ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            imageView = itemView.findViewById(R.id.imageView);
+        }
     }
 }

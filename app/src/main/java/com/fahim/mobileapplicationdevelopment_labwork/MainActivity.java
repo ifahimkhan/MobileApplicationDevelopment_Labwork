@@ -13,19 +13,22 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSION_REQUEST_CODE = 100;
-    private ListView listView;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = findViewById(R.id.listView);
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new GridLayoutManager(this,3));
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             // Android 13 and above: Request READ_MEDIA_IMAGES permission
@@ -62,9 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadImages() {
         ArrayList<String> imagePaths = getAllImages(this);
-        ListView listView = findViewById(R.id.listView);
         ImageAdapter adapter = new ImageAdapter(this, imagePaths);
-        listView.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
     }
 
     public static ArrayList<String> getAllImages(Context context) {
