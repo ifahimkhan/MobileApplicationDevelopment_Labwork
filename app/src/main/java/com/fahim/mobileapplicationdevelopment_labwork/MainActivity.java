@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
 
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.addJavascriptInterface(new WebAppInterface(this), "Android");
+        webView.addJavascriptInterface(new WebAppInterface(this), "Fahim");
         webView.setWebViewClient(new MyWebViewClient(this));
 
 
@@ -81,4 +81,12 @@ public class MainActivity extends AppCompatActivity {
         progressBar.setIndeterminate(false);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (webView.canGoBack()){
+            webView.goBack();
+        }else{
+            super.onBackPressed();
+        }
+    }
 }
