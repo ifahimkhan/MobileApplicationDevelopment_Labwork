@@ -12,13 +12,13 @@ public class FileReadWriteActivity extends AppCompatActivity {
 
     private EditText editText;
     private TextView textView;
-    private SharedPreferencesStorage sharedPreferencesStorage;
+    private EncryptedSharedPreferenceStorage sharedPreferencesStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_file_read_write);
-        sharedPreferencesStorage = new SharedPreferencesStorage(this);
+        sharedPreferencesStorage = new EncryptedSharedPreferenceStorage(this);
         editText = findViewById(R.id.textInputEditText);
         textView = findViewById(R.id.textView);
     }
