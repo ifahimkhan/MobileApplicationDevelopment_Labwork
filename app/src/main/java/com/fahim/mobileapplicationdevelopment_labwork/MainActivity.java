@@ -14,40 +14,30 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
     private RadioGroup radioGroup;
-    private Button button;
-    private Spinner spinner;
-    private ArrayList<String> subjects = new ArrayList<>();
+    private Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        radioGroup = findViewById(R.id.radioGroup);
-        button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        radioGroup = findViewById(R.id.radiogroup);
+        submit = findViewById(R.id.button);
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String selectedItem =spinner.getSelectedItem().toString();
-                RadioButton radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
-                String selectedOption = radioButton.getText().toString();
-                // Do something with the selected option
-                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
-                intent.putExtra("selectedAnswer",selectedOption);
-                intent.putExtra("selectedItem",selectedItem);
-                startActivity(intent);
+                RadioButton selectedRadioButton = findViewById(radioGroup.getCheckedRadioButtonId());
+                String selectedAnswer = selectedRadioButton.getText().toString();
+                Intent kushiIntent = new Intent(MainActivity.this, SecondActivity.class);
+                kushiIntent.putExtra("selectedAnswer", selectedAnswer);
+                startActivity(kushiIntent);
+
+
+
 
             }
         });
-        subjects.add("MAD");
-        subjects.add("SE");
-        subjects.add("AI");
-        subjects.add("OS");
-        spinner = findViewById(R.id.spinner);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,subjects);
-        spinner.setAdapter(adapter);
-
 
 
 

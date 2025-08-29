@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="_device_class_phone" />
+        <device id="_device_class_tablet" />
+        <device id="_device_class_foldable" />
+        <device id="pixel_8" />
+        <device id="_device_class_desktop" />
+        <device id="pixel_8_pro" />
+        <device id="tv_4k" />
+        <device id="wearos_square" />
+        <device id="wearos_large_round" />
+        <device id="wearos_small_round" />
+        <pickBest>false</pickBest>
+        <target>android-35</target>
+      </config>
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/../../../fahim/AppData/Local/Android/Sdk/platforms/android-34/data/res/layout/simple_spinner_dropdown_item.xml">
+        <config>
+          <theme>@style/Theme.MobileApplicationDevelopment_Labwork</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/Theme.MobileApplicationDevelopment_Labwork</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_second.xml">
+        <config>
+          <theme>@style/Theme.MobileApplicationDevelopment_Labwork</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml">
+        <config>
+          <theme>@style/Theme.MobileApplicationDevelopment_Labwork</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4df2b5a1-3d49-4e3f-a1c8-386083f509e9" name="Changes" comment="feat: Add quiz functionality and result display&#10;&#10;This commit introduces a simple quiz feature.&#10;&#10;- MainActivity:&#10;  - Added a RadioGroup for quiz options.&#10;  - Added a Spinner for subject selection.&#10;  - Implemented a &quot;Submit&quot; button to navigate to SecondActivity.&#10;  - Passes the selected answer and subject to SecondActivity via Intent.&#10;- SecondActivity:&#10;  - Displays the selected answer and subject received from MainActivity.&#10;  - Changes the text color to green for the correct answer (&quot;James Gosling&quot;) and red otherwise.&#10;- Layouts:&#10;  - Updated activity_main.xml to include RadioGroup, Spinner, and Button.&#10;  - Created activity_second.xml to display the result.&#10;- Resources:&#10;  - Added green and red color definitions in colors.xml.&#10;- Manifest:&#10;  - Declared SecondActivity in AndroidManifest.xml.&#10;- Project Configuration:&#10;  - Updated JDK version to 21 in misc.xml and compiler.xml.&#10;  - Updated deployment target selector and gradle settings.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fahim/mobileapplicationdevelopment_labwork/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fahim/mobileapplicationdevelopment_labwork/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fahim/mobileapplicationdevelopment_labwork/SecondActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fahim/mobileapplicationdevelopment_labwork/SecondActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\i_fah\.android\avd\Pixel_2_Edited.avd)]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile_vertical" />
+        <option value="Interface" />
+        <option value="valueResourceFile" />
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Users\i_fah\OneDrive\Desktop\parth.jks" />
+    <option name="KEY_ALIAS" value="parth" />
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="intents" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ifahimkhan&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ifahimkhan/MobileApplicationDevelopment_Labwork.git&quot;,
+    &quot;accountId&quot;: &quot;c33425d7-3671-40c4-b0c9-bf2e17e56746&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;ifahimkhan&quot;,
+    &quot;repository&quot;: &quot;MobileApplicationDevelopment_Labwork&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.1/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/files/example.txt" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.1/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/shared_prefs/secret_shared_prefs.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.1/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/shared_prefs/userPrefs.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.1/device-explorer/Xiaomi 2201117TI/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/files/example.txt" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/cache/98f022a2bd5e881559bc4daed18369ff.0" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/cache/98f022a2bd5e881559bc4daed18369ff.1" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/cache/responses/8cb584ffb6ec5b28fcefd3cc8354f965.0" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/cache/responses/8cb584ffb6ec5b28fcefd3cc8354f965.1" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/cache/responses/98f022a2bd5e881559bc4daed18369ff.0" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/cache/responses/98f022a2bd5e881559bc4daed18369ff.1" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/cache/responses/ff076f7b2de4fac13a3f147e95f9a541.0" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/cache/responses/ff076f7b2de4fac13a3f147e95f9a541.1" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/cache/responses/journal" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/cache/task_database.lck" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/files/example.txt" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/CHAINWAY C71/_/data/data/com.tagit.iceadvance/shared_prefs/Tagit_ICE_THS_PREFS.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2024.2/device-explorer/Pixel 2/_/data/data/com.fahim.mobileapplicationdevelopment_labwork/cache/image_manager_disk_cache/journal" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2jY5rwf1nbciHcN85a2XpniFzhz" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;BundleExportedModule&quot;: &quot;MobileApplicationDevelopment_Labwork.app&quot;,
+    &quot;ExportBundle.BundlePathForMobileApplicationDevelopment_Labwork.app&quot;: &quot;C:\\Users\\i_fah\\AndroidStudioProjects\\MobileApplicationDevelopment_Labwork\\app&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;PROJECT_TRUSTED_KEY&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;android-custom-viewC:/Users/fahim/AppData/Local/Android/Sdk/sources/android-34/android/widget/TextView.java_SELECTED&quot;: &quot;TextView&quot;,
+    &quot;android-custom-viewC:/Users/i_fah/AndroidStudioProjects/MobileApplicationDevelopment_Labwork/app/src/main/java/com/fahim/mobileapplicationdevelopment_labwork/CustomCircleView.java_SELECTED&quot;: &quot;CustomCircleView&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;practice__sessionC&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/i_fah/AndroidStudioProjects/MobileApplicationDevelopment_Labwork/app/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/i_fah/AndroidStudioProjects/MobileApplicationDevelopment_Labwork/app/src/main/res/drawable&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ExportApk.BuildVariants&quot;: [
+      &quot;release&quot;
+    ],
+    &quot;android-custom-viewC:/Users/fahim/AppData/Local/Android/Sdk/sources/android-34/android/widget/TextView.java_TextView_DIMENSIONS&quot;: [
+      &quot;1080&quot;,
+      &quot;1920&quot;
+    ],
+    &quot;android-custom-viewC:/Users/i_fah/AndroidStudioProjects/MobileApplicationDevelopment_Labwork/app/src/main/java/com/fahim/mobileapplicationdevelopment_labwork/CustomCircleView.java_CustomCircleView_DIMENSIONS&quot;: [
+      &quot;1080&quot;,
+      &quot;1920&quot;
+    ],
+    &quot;com.android.tools.idea.sqlite.queryhistory&quot;: [
+      &quot;DELETE FROM task_table&quot;,
+      &quot;SELECT * FROM task_table ORDER BY id ASC&quot;,
+      &quot;insert into task_table(id,title,description)values(4,'fahim','khan')&quot;
+    ]
+  }
+}</component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.-554435639">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.1106243891">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-500429166">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.1499006382">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-163465078">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-943428531">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.281443219">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.2073415079">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-1570512701">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-1524308233">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-1275083379">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\i_fah\AndroidStudioProjects\MobileApplicationDevelopment_Labwork" />
+      <recent name="C:\Users\i_fah\AndroidStudioProjects\MobileApplicationDevelopment_Labwork\app\src\main\java\com\fahim\mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.1393607876">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.1370903290">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-1601392606">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-848082835">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-2143484411">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-536498967">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-80754542">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-2142171428">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.261553311">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="android.template.-1275231883">
+      <recent name="com.fahim.mobileapplicationdevelopment_labwork" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\i_fah\AndroidStudioProjects\MobileApplicationDevelopment_Labwork\app\src\main\res\drawable" />
+      <recent name="C:\Users\i_fah\AndroidStudioProjects\MobileApplicationDevelopment_Labwork\app\src\main\res\mipmap-hdpi" />
+      <recent name="C:\Users\i_fah\AndroidStudioProjects\MobileApplicationDevelopment_Labwork\app\src\main\java\com\fahim\mobileapplicationdevelopment_labwork" />
+      <recent name="C:\Users\i_fah\AndroidStudioProjects\MobileApplicationDevelopment_Labwork\app" />
+      <recent name="C:\Users\i_fah\AndroidStudioProjects\MobileApplicationDevelopment_Labwork\app\src\main\res\layout" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="MobileApplicationDevelopment_Labwork.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\i_fah\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4df2b5a1-3d49-4e3f-a1c8-386083f509e9" name="Changes" comment="" />
+      <created>1721551371638</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721551371638</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Setting Up Android Studio for Android App Development.docx">
+      <option name="closed" value="true" />
+      <created>1736785849302</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1736785849302</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Setting Up Android Studio for Android App Development.docx">
+      <option name="closed" value="true" />
+      <created>1736785974148</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1736785974148</updated>
+    </task>
+    <task id="LOCAL-00069" summary="intent explicit example">
+      <option name="closed" value="true" />
+      <created>1737367466238</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1737367466238</updated>
+    </task>
+    <task id="LOCAL-00070" summary="intent explicit example">
+      <option name="closed" value="true" />
+      <created>1737434554339</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1737434554339</updated>
+    </task>
+    <task id="LOCAL-00071" summary="updating images">
+      <option name="closed" value="true" />
+      <created>1737736062398</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1737736062398</updated>
+    </task>
+    <task id="LOCAL-00072" summary="adding datepicker dialog">
+      <option name="closed" value="true" />
+      <created>1737749852888</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1737749852888</updated>
+    </task>
+    <task id="LOCAL-00073" summary="adding vcs dialog">
+      <option name="closed" value="true" />
+      <created>1738256944960</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1738256944961</updated>
+    </task>
+    <task id="LOCAL-00074" summary="if applied this commit will add gallery app">
+      <option name="closed" value="true" />
+      <created>1739732557896</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1739732557896</updated>
+    </task>
+    <task id="LOCAL-00075" summary="if applied this commit will add gallery app">
+      <option name="closed" value="true" />
+      <created>1739734727835</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1739734727835</updated>
+    </task>
+    <task id="LOCAL-00076" summary="if applied this commit will add gallery app">
+      <option name="closed" value="true" />
+      <created>1739852377963</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1739852377963</updated>
+    </task>
+    <task id="LOCAL-00077" summary="if applied this commit will add polymorphic behaviour between ExternalStorage and InternalStorage">
+      <option name="closed" value="true" />
+      <created>1740148859733</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1740148859733</updated>
+    </task>
+    <task id="LOCAL-00078" summary="if applied this commit will add Storage access Framework demo">
+      <option name="closed" value="true" />
+      <created>1740300459227</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1740300459228</updated>
+    </task>
+    <task id="LOCAL-00079" summary="if applied this commit will add Storage access Framework demo">
+      <option name="closed" value="true" />
+      <created>1740300618410</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1740300618410</updated>
+    </task>
+    <task id="LOCAL-00080" summary="if applied this commit will add Storage access Framework demo">
+      <option name="closed" value="true" />
+      <created>1740424829036</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1740424829036</updated>
+    </task>
+    <task id="LOCAL-00081" summary="if applied this commit will add Storage access Framework demo">
+      <option name="closed" value="true" />
+      <created>1740425333094</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1740425333094</updated>
+    </task>
+    <task id="LOCAL-00082" summary="if applied this commit will add Storage access Framework demo">
+      <option name="closed" value="true" />
+      <created>1740465198553</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1740465198553</updated>
+    </task>
+    <task id="LOCAL-00083" summary="if applied this commit will add Room Database">
+      <option name="closed" value="true" />
+      <created>1740677654017</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1740677654018</updated>
+    </task>
+    <task id="LOCAL-00084" summary="room lib updated">
+      <option name="closed" value="true" />
+      <created>1740998778647</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1740998778648</updated>
+    </task>
+    <task id="LOCAL-00085" summary="if applied this commit will add retrofit implementation to make api call in android">
+      <option name="closed" value="true" />
+      <created>1741264912122</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1741264912122</updated>
+    </task>
+    <task id="LOCAL-00086" summary="IF applied this commit will add navgraph">
+      <option name="closed" value="true" />
+      <created>1741584793386</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1741584793386</updated>
+    </task>
+    <task id="LOCAL-00087" summary="IF applied this commit will add localization in your app">
+      <option name="closed" value="true" />
+      <created>1742147386416</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1742147386417</updated>
+    </task>
+    <task id="LOCAL-00088" summary="IF applied this commit will add retrofit caching mechanism demonstration.">
+      <option name="closed" value="true" />
+      <created>1742527407511</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1742527407511</updated>
+    </task>
+    <task id="LOCAL-00089" summary="IF applied this commit will add retrofit caching mechanism demonstration.">
+      <option name="closed" value="true" />
+      <created>1743137014582</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1743137014582</updated>
+    </task>
+    <task id="LOCAL-00090" summary="If applied this commit will add tone generator">
+      <option name="closed" value="true" />
+      <created>1748257059800</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1748257059800</updated>
+    </task>
+    <task id="LOCAL-00091" summary="committing for merging">
+      <option name="closed" value="true" />
+      <created>1753072933372</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1753072933385</updated>
+    </task>
+    <task id="LOCAL-00092" summary="committing for merging">
+      <option name="closed" value="true" />
+      <created>1753072981243</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1753072981243</updated>
+    </task>
+    <task id="LOCAL-00093" summary="committing basic calculator">
+      <option name="closed" value="true" />
+      <created>1753331005412</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1753331005413</updated>
+    </task>
+    <task id="LOCAL-00094" summary="committing basic calculator">
+      <option name="closed" value="true" />
+      <created>1753497830758</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1753497830758</updated>
+    </task>
+    <task id="LOCAL-00095" summary="committing full name code">
+      <option name="closed" value="true" />
+      <created>1753766798763</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1753766798763</updated>
+    </task>
+    <task id="LOCAL-00096" summary="committing full name code">
+      <option name="closed" value="true" />
+      <created>1753789043850</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1753789043851</updated>
+    </task>
+    <task id="LOCAL-00097" summary="committing code for login activity">
+      <option name="closed" value="true" />
+      <created>1753790016664</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1753790016664</updated>
+    </task>
+    <task id="LOCAL-00098" summary="committing code for login activity">
+      <option name="closed" value="true" />
+      <created>1753792932893</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1753792932893</updated>
+    </task>
+    <task id="LOCAL-00099" summary="committing code for login activity">
+      <option name="closed" value="true" />
+      <created>1753939111053</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1753939111053</updated>
+    </task>
+    <task id="LOCAL-00100" summary="committing code for login activity">
+      <option name="closed" value="true" />
+      <created>1753939126985</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1753939126985</updated>
+    </task>
+    <task id="LOCAL-00101" summary="committing code for login activity">
+      <option name="closed" value="true" />
+      <created>1753939154639</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1753939154639</updated>
+    </task>
+    <task id="LOCAL-00102" summary="committing code for layouts">
+      <option name="closed" value="true" />
+      <created>1753939674427</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1753939674427</updated>
+    </task>
+    <task id="LOCAL-00103" summary="committing code for basic fragments">
+      <option name="closed" value="true" />
+      <created>1754017570788</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1754017570788</updated>
+    </task>
+    <task id="LOCAL-00104" summary="committing code for fragments communication">
+      <option name="closed" value="true" />
+      <created>1754018628020</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1754018628020</updated>
+    </task>
+    <task id="LOCAL-00105" summary="commit idea">
+      <option name="closed" value="true" />
+      <created>1754112854376</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1754112854376</updated>
+    </task>
+    <task id="LOCAL-00106" summary="This commit implements Retrofit to fetch and display a list of videos from a remote API.&#10;&#10;The following changes were made:&#10;- Added Retrofit and Glide dependencies to `build.gradle.kts`.&#10;- Created `RetrofitClient` and `ApiService` for network requests.&#10;- Created `VideoItem` data class to model video data.&#10;- Created `VideoAdapter` to display videos in a RecyclerView.&#10;- Modified `MainActivity` to fetch videos using Retrofit and display them in a RecyclerView.&#10;&#10;- Added new layout files (`item_video.xml`) and drawable resources for the video list UI.&#10;- Updated `AndroidManifest.xml` to include internet permission.&#10;- Updated `activity_main.xml` to use a RecyclerView.">
+      <option name="closed" value="true" />
+      <created>1754244763745</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1754244763745</updated>
+    </task>
+    <task id="LOCAL-00107" summary="added video.json file for live access">
+      <option name="closed" value="true" />
+      <created>1754293814098</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1754293814098</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Updates Retrofit base URL and API endpoint for video data&#10;&#10;The base URL for the Retrofit client has been changed to &quot;https://ifahimkhan.github.io/&quot;.&#10;The API endpoint for fetching video data in `ApiService` has been updated to &quot;/MobileApplicationDevelopment_Labwork/video.json&quot;.">
+      <option name="closed" value="true" />
+      <created>1754294533043</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1754294533043</updated>
+    </task>
+    <task id="LOCAL-00109" summary="enable edge-to-edge display in MainActivity&#10;&#10;This commit enables edge-to-edge display in the `MainActivity` by calling `EdgeToEdge.enable(this)` and setting a `OnApplyWindowInsetsListener` to adjust padding for system bars. The root layout in `activity_main.xml` has also been given an ID for this purpose.">
+      <option name="closed" value="true" />
+      <created>1754304802621</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1754304802621</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Refactor: Use ListView instead of RecyclerView for image display&#10;&#10;This commit replaces the RecyclerView with a ListView for displaying images in the gallery.&#10;Replaces Glide with a manual image loading using bitmap to showcase the performance difference">
+      <option name="closed" value="true" />
+      <created>1754807559595</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1754807559595</updated>
+    </task>
+    <task id="LOCAL-00111" summary="feat: migrated image display from ListView to RecyclerView with GridLayout&#10;&#10;This commit refactors the image display functionality:&#10;- Replaced the ListView with a RecyclerView.&#10;- Implemented a GridLayoutManager for the RecyclerView to display images in a grid with 3 columns.&#10;- Updated the ImageAdapter to extend RecyclerView.Adapter and utilize a ViewHolder pattern for improved performance.&#10;- Removed inefficient image loading options (inSampleSize) as RecyclerView handles view recycling more effectively.&#10;- Ensured compatibility with Android 13+ by requesting READ_MEDIA_IMAGES permission.">
+      <option name="closed" value="true" />
+      <created>1754808679683</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1754808679683</updated>
+    </task>
+    <task id="LOCAL-00112" summary="updated jdk version and added webview backpress support&#10;&#10;The JDK version was updated from 17 to 21 in the project's configuration files.&#10;Additionally, the `MainActivity` was modified to handle the back button press within the `WebView`, allowing navigation to the previous page if available.&#10;The Javascript interface name was also changed from &quot;Android&quot; to &quot;Fahim&quot;.&#10;Gradle project settings were updated to set the test runner to &quot;CHOOSE_PER_TEST&quot; and `resolveExternalAnnotations` was removed.">
+      <option name="closed" value="true" />
+      <created>1754966526567</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1754966526567</updated>
+    </task>
+    <task id="LOCAL-00113" summary="idea">
+      <option name="closed" value="true" />
+      <created>1754966577954</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1754966577954</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Adding radio button question to get correct answer.&#10;&#10;This commit updates the `MainActivity` to display a question with radio button options. The selected answer is then passed to `SecondActivity` to verify and display the result.&#10;&#10;Key changes:&#10;- Updated `MainActivity` layout to include a `TextView` for the question and a `RadioGroup` for answer options.&#10;- Implemented logic in `MainActivity` to get the selected radio button value.&#10;- Modified `SecondActivity` to receive the selected answer, display it, and indicate whether it's correct or incorrect.&#10;- Added new colors for correct and incorrect answers.&#10;- Updated project configuration files (`.idea/misc.xml`, `.idea/compiler.xml`, etc.).">
+      <option name="closed" value="true" />
+      <created>1754970773853</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1754970773853</updated>
+    </task>
+    <task id="LOCAL-00115" summary="feat: Add quiz functionality and result display&#10;&#10;This commit introduces a simple quiz feature.&#10;&#10;- MainActivity:&#10;  - Added a RadioGroup for quiz options.&#10;  - Added a Spinner for subject selection.&#10;  - Implemented a &quot;Submit&quot; button to navigate to SecondActivity.&#10;  - Passes the selected answer and subject to SecondActivity via Intent.&#10;- SecondActivity:&#10;  - Displays the selected answer and subject received from MainActivity.&#10;  - Changes the text color to green for the correct answer (&quot;James Gosling&quot;) and red otherwise.&#10;- Layouts:&#10;  - Updated activity_main.xml to include RadioGroup, Spinner, and Button.&#10;  - Created activity_second.xml to display the result.&#10;- Resources:&#10;  - Added green and red color definitions in colors.xml.&#10;- Manifest:&#10;  - Declared SecondActivity in AndroidManifest.xml.&#10;- Project Configuration:&#10;  - Updated JDK version to 21 in misc.xml and compiler.xml.&#10;  - Updated deployment target selector and gradle settings.">
+      <option name="closed" value="true" />
+      <created>1755152308590</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1755152308590</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="d4a2015d-fdd2-4232-9012-3e5a06a20afe" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="4_listview/recycler_view" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="d4a2015d-fdd2-4232-9012-3e5a06a20afe">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="if applied this commit will add Room Database" />
+    <MESSAGE value="room lib updated" />
+    <MESSAGE value="if applied this commit will add retrofit implementation to make api call in android" />
+    <MESSAGE value="IF applied this commit will add navgraph" />
+    <MESSAGE value="IF applied this commit will add localization in your app" />
+    <MESSAGE value="IF applied this commit will add retrofit caching mechanism demonstration." />
+    <MESSAGE value="If applied this commit will add tone generator" />
+    <MESSAGE value="committing for merging" />
+    <MESSAGE value="committing basic calculator" />
+    <MESSAGE value="committing full name code" />
+    <MESSAGE value="committing code for login activity" />
+    <MESSAGE value="committing code for layouts" />
+    <MESSAGE value="committing code for basic fragments" />
+    <MESSAGE value="committing code for fragments communication" />
+    <MESSAGE value="commit idea" />
+    <MESSAGE value="This commit implements Retrofit to fetch and display a list of videos from a remote API.&#10;&#10;The following changes were made:&#10;- Added Retrofit and Glide dependencies to `build.gradle.kts`.&#10;- Created `RetrofitClient` and `ApiService` for network requests.&#10;- Created `VideoItem` data class to model video data.&#10;- Created `VideoAdapter` to display videos in a RecyclerView.&#10;- Modified `MainActivity` to fetch videos using Retrofit and display them in a RecyclerView.&#10;&#10;- Added new layout files (`item_video.xml`) and drawable resources for the video list UI.&#10;- Updated `AndroidManifest.xml` to include internet permission.&#10;- Updated `activity_main.xml` to use a RecyclerView." />
+    <MESSAGE value="added video.json file for live access" />
+    <MESSAGE value="Updates Retrofit base URL and API endpoint for video data&#10;&#10;The base URL for the Retrofit client has been changed to &quot;https://ifahimkhan.github.io/&quot;.&#10;The API endpoint for fetching video data in `ApiService` has been updated to &quot;/MobileApplicationDevelopment_Labwork/video.json&quot;." />
+    <MESSAGE value="enable edge-to-edge display in MainActivity&#10;&#10;This commit enables edge-to-edge display in the `MainActivity` by calling `EdgeToEdge.enable(this)` and setting a `OnApplyWindowInsetsListener` to adjust padding for system bars. The root layout in `activity_main.xml` has also been given an ID for this purpose." />
+    <MESSAGE value="Refactor: Use ListView instead of RecyclerView for image display&#10;&#10;This commit replaces the RecyclerView with a ListView for displaying images in the gallery.&#10;Replaces Glide with a manual image loading using bitmap to showcase the performance difference" />
+    <MESSAGE value="feat: migrated image display from ListView to RecyclerView with GridLayout&#10;&#10;This commit refactors the image display functionality:&#10;- Replaced the ListView with a RecyclerView.&#10;- Implemented a GridLayoutManager for the RecyclerView to display images in a grid with 3 columns.&#10;- Updated the ImageAdapter to extend RecyclerView.Adapter and utilize a ViewHolder pattern for improved performance.&#10;- Removed inefficient image loading options (inSampleSize) as RecyclerView handles view recycling more effectively.&#10;- Ensured compatibility with Android 13+ by requesting READ_MEDIA_IMAGES permission." />
+    <MESSAGE value="updated jdk version and added webview backpress support&#10;&#10;The JDK version was updated from 17 to 21 in the project's configuration files.&#10;Additionally, the `MainActivity` was modified to handle the back button press within the `WebView`, allowing navigation to the previous page if available.&#10;The Javascript interface name was also changed from &quot;Android&quot; to &quot;Fahim&quot;.&#10;Gradle project settings were updated to set the test runner to &quot;CHOOSE_PER_TEST&quot; and `resolveExternalAnnotations` was removed." />
+    <MESSAGE value="idea" />
+    <MESSAGE value="Adding radio button question to get correct answer.&#10;&#10;This commit updates the `MainActivity` to display a question with radio button options. The selected answer is then passed to `SecondActivity` to verify and display the result.&#10;&#10;Key changes:&#10;- Updated `MainActivity` layout to include a `TextView` for the question and a `RadioGroup` for answer options.&#10;- Implemented logic in `MainActivity` to get the selected radio button value.&#10;- Modified `SecondActivity` to receive the selected answer, display it, and indicate whether it's correct or incorrect.&#10;- Added new colors for correct and incorrect answers.&#10;- Updated project configuration files (`.idea/misc.xml`, `.idea/compiler.xml`, etc.)." />
+    <MESSAGE value="feat: Add quiz functionality and result display&#10;&#10;This commit introduces a simple quiz feature.&#10;&#10;- MainActivity:&#10;  - Added a RadioGroup for quiz options.&#10;  - Added a Spinner for subject selection.&#10;  - Implemented a &quot;Submit&quot; button to navigate to SecondActivity.&#10;  - Passes the selected answer and subject to SecondActivity via Intent.&#10;- SecondActivity:&#10;  - Displays the selected answer and subject received from MainActivity.&#10;  - Changes the text color to green for the correct answer (&quot;James Gosling&quot;) and red otherwise.&#10;- Layouts:&#10;  - Updated activity_main.xml to include RadioGroup, Spinner, and Button.&#10;  - Created activity_second.xml to display the result.&#10;- Resources:&#10;  - Added green and red color definitions in colors.xml.&#10;- Manifest:&#10;  - Declared SecondActivity in AndroidManifest.xml.&#10;- Project Configuration:&#10;  - Updated JDK version to 21 in misc.xml and compiler.xml.&#10;  - Updated deployment target selector and gradle settings." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add quiz functionality and result display&#10;&#10;This commit introduces a simple quiz feature.&#10;&#10;- MainActivity:&#10;  - Added a RadioGroup for quiz options.&#10;  - Added a Spinner for subject selection.&#10;  - Implemented a &quot;Submit&quot; button to navigate to SecondActivity.&#10;  - Passes the selected answer and subject to SecondActivity via Intent.&#10;- SecondActivity:&#10;  - Displays the selected answer and subject received from MainActivity.&#10;  - Changes the text color to green for the correct answer (&quot;James Gosling&quot;) and red otherwise.&#10;- Layouts:&#10;  - Updated activity_main.xml to include RadioGroup, Spinner, and Button.&#10;  - Created activity_second.xml to display the result.&#10;- Resources:&#10;  - Added green and red color definitions in colors.xml.&#10;- Manifest:&#10;  - Declared SecondActivity in AndroidManifest.xml.&#10;- Project Configuration:&#10;  - Updated JDK version to 21 in misc.xml and compiler.xml.&#10;  - Updated deployment target selector and gradle settings." />
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="com.fahim.mobileapplicationdevelopment_labwork">
+          <value>
+            <CheckInfo lastCheckTimestamp="1755842543941" />
+          </value>
+        </entry>
+        <entry key="com.fahim.mobileapplicationdevelopment_labwork.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1755842543940" />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

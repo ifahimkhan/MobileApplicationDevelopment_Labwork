@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -22,16 +23,16 @@ public class SecondActivity extends AppCompatActivity {
             return insets;
         });
 
-        String selectedAnswer = getIntent().getStringExtra("selectedAnswer");
-        String selectedItem = getIntent().getStringExtra("selectedItem");
         TextView textView = findViewById(R.id.textView2);
-        textView.setText(selectedAnswer+"\n"+selectedItem);
+        String selectedAnswer = getIntent().getStringExtra("selectedAnswer");
+        textView.setText(selectedAnswer);
 
-        if (selectedAnswer.contains("James Gosling")){
-            textView.setTextColor(getColor(R.color.green));
+        if (selectedAnswer.equalsIgnoreCase("James Gosling")){
+            textView.setTextColor(ContextCompat.getColor(this, R.color.darkgreen));
         }else{
-            textView.setTextColor(getColor(R.color.red));
+            textView.setTextColor(ContextCompat.getColor(this, R.color.darkred));
         }
+
 
     }
 }
